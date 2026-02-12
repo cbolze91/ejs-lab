@@ -14,7 +14,8 @@
 
     <% menuItems.forEach(item=> { %>
         <h2>
-        <%= item.name %> - $<%= item.price.toFixed(2) %>
+        <%= item.name %> <%= item.rating===5 ? '⭐' : '' %>
+        - $<%= item.price.toFixed(2) %>
         </h2>
         <p><strong>Rating:</strong>
          <%= item.rating %>/5

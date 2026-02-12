@@ -12,40 +12,64 @@
     <h1>Full Menu</h1>
     
     <h2>Mains</h2>
-    <% menu.filter(i=> i.category === 'mains').forEach(item => { %>
-        <h3>
-            <%= item.name %>
-        </h3>
-        <p>$<%= item.price.toFixed(2) %> | Rating: <%= item.rating %>/5</p>
-        <p>
-            <%= item.details %>
-        </p>
-        <hr />
+
+        <% menu.filter(i=> i.category === 'mains').forEach(item => { %>
+
+            <h3>
+                <%= item.name %><%= item.rating===5 ? ' ⭐' : '' %>
+            </h3>
+
+            <p>
+                $<%= item.price.toFixed(2) %> | Rating: <%= item.rating %>/5
+            </p>
+
+            <p>
+                <%= item.details %>
+            </p>
+
+            <hr />
+
         <% }) %>
     
-            <h2>Desserts</h2>
-            <% menu.filter(i=> i.category === 'desserts').forEach(item => { %>
-                <h3>
-                    <%= item.name %>
-                </h3>
-                <p>$<%= item.price.toFixed(2) %> | Rating: <%= item.rating %>/5</p>
-                <p>
-                    <%= item.details %>
-                </p>
-                <hr />
-                <% }) %>
+    <h2>Desserts</h2>
+
+        <% menu.filter(i=> i.category === 'desserts').forEach(item => { %>
+
+            <h3>
+                <%= item.name %><%= item.rating===5 ? ' ⭐' : '' %>
+            </h3>
+
+            <p>
+                $<%= item.price.toFixed(2) %> | Rating: <%= item.rating %>/5
+            </p>
+
+            <p>
+                <%= item.details %>
+            </p>
+
+            <hr />
+
+        <% }) %>
     
-                    <h2>Sides</h2>
-                    <% menu.filter(i=> i.category === 'sides').forEach(item => { %>
-                        <h3>
-                            <%= item.name %>
-                        </h3>
-                        <p>$<%= item.price.toFixed(2) %> | Rating: <%= item.rating %>/5</p>
-                        <p>
-                            <%= item.details %>
-                        </p>
-                        <hr />
-                        <% }) %>
+    <h2>Sides</h2>
+
+        <% menu.filter(i=> i.category === 'sides').forEach(item => { %>
+
+            <h3>
+                <%= item.name %><%= item.name %><%= item.rating===5 ? ' ⭐' : '' %>
+            </h3>
+
+            <p>
+                $<%= item.price.toFixed(2) %> | Rating: <%= item.rating %>/5
+            </p>
+            
+            <p>
+                <%= item.details %>
+            </p>
+
+            <hr />
+
+        <% }) %>
 
 </body>
 
